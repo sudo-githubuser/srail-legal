@@ -6,99 +6,555 @@
   <title>SRAIL — Terms & Conditions</title>
   <meta name="description" content="Terms & Conditions for using SRAIL.">
   <link rel="canonical" href="https://<your-username>.github.io/srail-legal/terms.html">
+
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-:root { --max: 880px; --pad: 1.25rem; }
-*{box-sizing:border-box}
-html{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,Apple Color Emoji,Segoe UI Emoji;line-height:1.6}
-body{margin:0;color:#0f172a;background:#f8fafc}
-header{background:#0f172a;color:#fff;padding:2.5rem var(--pad)}
-header h1{margin:0 0 .25rem;font-size:1.75rem}
-header p{margin:.25rem 0 0;opacity:.85}
-main{max-width:var(--max);margin:0 auto;padding:1.5rem var(--pad) 3rem}
-nav{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.75rem}
-nav a{display:inline-block;padding:.5rem .75rem;border-radius:.5rem;background:#e2e8f0;color:#0f172a;text-decoration:none}
-article{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem 1.25rem}
-h2{margin-top:1.5rem}
-footer{max-width:var(--max);margin:0 auto;padding:1.5rem var(--pad) 3rem;color:#475569}
-.meta{font-size:.95rem;color:#475569}
-.small{font-size:.9rem;color:#475569}
-.muted{color:#64748b}
-.toc{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:12px;padding:1rem;margin:1rem 0}
-code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:.1rem .35rem}
-</style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --secondary: #06b6d4;
+      --accent: #f59e0b;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --bg-light: #f8fafc;
+      --bg-dark: #0f172a;
+      --text-dark: #0f172a;
+      --text-light: #64748b;
+      --border: #e2e8f0;
+      --white: #ffffff;
+      --shadow: 0 10px 40px rgba(99, 102, 241, 0.1);
+      --shadow-lg: 0 20px 60px rgba(99, 102, 241, 0.15);
+      --max-width: 1200px;
+      --border-radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: var(--text-dark);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Animated background particles */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+      animation: float 20s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(30px, -30px); }
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      padding: 2rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .header-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3); }
+      50% { transform: scale(1.05); box-shadow: 0 12px 30px rgba(99, 102, 241, 0.5); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0;
+    }
+
+    .subtitle {
+      color: var(--text-light);
+      font-size: 1.125rem;
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    }
+
+    nav a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+    }
+
+    nav a.secondary {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    nav a.secondary:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 3rem auto;
+      padding: 0 1.5rem 5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-header {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 3rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+      animation: slideUp 0.6s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .icon-large {
+      font-size: 3rem;
+      color: var(--primary);
+    }
+
+    .meta {
+      color: var(--text-light);
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, var(--warning) 0%, #d97706 100%);
+      color: white;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    article {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      animation: slideUp 0.6s ease-out;
+      animation-delay: 0.2s;
+      animation-fill-mode: backwards;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h3 .material-icons {
+      color: var(--primary);
+      font-size: 1.75rem;
+    }
+
+    p {
+      color: var(--text-light);
+      font-size: 1.0625rem;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      color: var(--text-light);
+      font-size: 1.0625rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.8;
+    }
+
+    strong {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    code {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 0.2rem 0.5rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--primary-dark);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    .warning-box {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border-left: 4px solid var(--warning);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .warning-box p {
+      margin-bottom: 0;
+      color: #78350f;
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--text-light);
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    footer .footer-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .page-header {
+        padding: 2rem 1.5rem;
+      }
+
+      article {
+        padding: 1.5rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>SRAIL</h1>
-    <p class="meta">SRAIL — Legal</p>
-    <nav aria-label="Legal">
-      <a href="./index.html">Home</a>
-      <a href="./privacy.html">Privacy Policy</a>
-      <a href="./terms.html">Terms & Conditions</a>
-    </nav>
+    <div class="header-content">
+      <div class="logo-section">
+        <div class="logo-icon">
+          <span class="material-icons">chat</span>
+        </div>
+        <div>
+          <h1>SRAIL</h1>
+          <p class="subtitle">
+            <span class="material-icons" style="font-size: 1.125rem;">security</span>
+            Legal Documents
+          </p>
+        </div>
+      </div>
+      <nav aria-label="Legal">
+        <a href="./index.html" class="secondary">
+          <span class="material-icons">home</span>
+          Home
+        </a>
+        <a href="./privacy.html" class="secondary">
+          <span class="material-icons">privacy_tip</span>
+          Privacy Policy
+        </a>
+        <a href="./terms.html">
+          <span class="material-icons">description</span>
+          Terms & Conditions
+        </a>
+      </nav>
+    </div>
   </header>
+
   <main>
-  
-<article>
-  <h2>Terms &amp; Conditions</h2>
-  <p class="meta">Effective Date: September 30, 2025</p>
+    <div class="page-header">
+      <div class="badge">
+        <span class="material-icons" style="font-size: 1rem;">gavel</span>
+        Effective September 30, 2025
+      </div>
+      <h2>
+        <span class="material-icons icon-large">description</span>
+        Terms &amp; Conditions
+      </h2>
+      <p style="font-size: 1.125rem; color: var(--text-light);">
+        By using <strong>SRAIL</strong> ("the App"), you agree to these Terms &amp; Conditions.
+        If you do not agree, please do not use the App.
+      </p>
+    </div>
 
-  <p>By using <strong>SRAIL</strong> ("the App"), you agree to these Terms &amp; Conditions. If you do not agree, please do not use the App.</p>
+    <article>
+      <h3>
+        <span class="material-icons">info</span>
+        1. Service Description
+      </h3>
+      <ul>
+        <li>The App provides AI-powered chatbot functionality via Google's Gemini API.</li>
+        <li>An active internet connection is required.</li>
+        <li>Free usage is limited to <strong>50 messages per user per day</strong>. We may change limits or introduce paid tiers in the future.</li>
+      </ul>
 
-  <h3>1. Service Description</h3>
-  <ul>
-    <li>The App provides AI-powered chatbot functionality via Google’s Gemini API.</li>
-    <li>An active internet connection is required.</li>
-    <li>Free usage is limited to <strong>50 messages per user per day</strong>. We may change limits or introduce paid tiers in the future.</li>
-  </ul>
+      <h3>
+        <span class="material-icons">check_circle</span>
+        2. Acceptable Use
+      </h3>
+      <ul>
+        <li>Do not use the App for unlawful, harmful, infringing, or abusive activities.</li>
+        <li>Do not upload content that is illegal, hateful, harassing, sexually explicit, or otherwise objectionable.</li>
+        <li>You are responsible for the content you submit and for compliance with applicable laws.</li>
+      </ul>
 
-  <h3>2. Acceptable Use</h3>
-  <ul>
-    <li>Do not use the App for unlawful, harmful, infringing, or abusive activities.</li>
-    <li>Do not upload content that is illegal, hateful, harassing, sexually explicit, or otherwise objectionable.</li>
-    <li>You are responsible for the content you submit and for compliance with applicable laws.</li>
-  </ul>
+      <h3>
+        <span class="material-icons">smart_toy</span>
+        3. AI Output Limitations
+      </h3>
+      <div class="warning-box">
+        <p>
+          <strong>Important:</strong> AI responses may be inaccurate, incomplete, or inappropriate.
+          Verify important information independently. Nothing in the App constitutes professional advice
+          (medical, legal, financial, etc.).
+        </p>
+      </div>
 
-  <h3>3. AI Output Limitations</h3>
-  <ul>
-    <li>AI responses may be inaccurate, incomplete, or inappropriate. Verify important information independently.</li>
-    <li>Nothing in the App constitutes professional advice (medical, legal, financial, etc.).</li>
-  </ul>
+      <h3>
+        <span class="material-icons">copyright</span>
+        4. Intellectual Property
+      </h3>
+      <ul>
+        <li>The App, its branding, and other associated assets are owned by Praveen S.</li>
+        <li>Content generated via Gemini may be subject to Google's terms and policies.</li>
+      </ul>
 
-  <h3>4. Intellectual Property</h3>
-  <ul>
-    <li>The App, its branding, and other associated assets are owned by Praveen S.</li>
-    <li>Content generated via Gemini may be subject to Google’s terms and policies.</li>
-  </ul>
+      <h3>
+        <span class="material-icons">shield</span>
+        5. Privacy &amp; Data
+      </h3>
+      <ul>
+        <li>User messages are transmitted to Google's Gemini API and may be used by Google to improve their AI systems.</li>
+        <li>Your use of the App signifies your consent to such processing and to our <a href="./privacy.html">Privacy Policy</a>.</li>
+      </ul>
 
-  <h3>5. Privacy &amp; Data</h3>
-  <ul>
-    <li>User messages are transmitted to Google’s Gemini API and may be used by Google to improve their AI systems.</li>
-    <li>Your use of the App signifies your consent to such processing and to our <a href="./privacy.html">Privacy Policy</a>.</li>
-  </ul>
+      <h3>
+        <span class="material-icons">warning</span>
+        6. Disclaimer of Warranties
+      </h3>
+      <p>The App is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, express or implied.</p>
 
-  <h3>6. Disclaimer of Warranties</h3>
-  <p>The App is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, express or implied.</p>
+      <h3>
+        <span class="material-icons">block</span>
+        7. Limitation of Liability
+      </h3>
+      <p>
+        To the maximum extent permitted by law, Praveen S will not be liable for any indirect, incidental,
+        special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred
+        directly or indirectly, resulting from your use of the App.
+      </p>
 
-  <h3>7. Limitation of Liability</h3>
-  <p>To the maximum extent permitted by law, Praveen S will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, resulting from your use of the App.</p>
+      <h3>
+        <span class="material-icons">cancel</span>
+        8. Termination
+      </h3>
+      <p>We may suspend or terminate access to the App at any time for any reason, including violations of these Terms.</p>
 
-  <h3>8. Termination</h3>
-  <p>We may suspend or terminate access to the App at any time for any reason, including violations of these Terms.</p>
+      <h3>
+        <span class="material-icons">sync</span>
+        9. Changes to the Terms
+      </h3>
+      <p>
+        We may modify these Terms from time to time. Continued use of the App after changes become effective
+        constitutes acceptance of the revised Terms.
+      </p>
 
-  <h3>9. Changes to the Terms</h3>
-  <p>We may modify these Terms from time to time. Continued use of the App after changes become effective constitutes acceptance of the revised Terms.</p>
+      <h3>
+        <span class="material-icons">account_balance</span>
+        10. Governing Law
+      </h3>
+      <p>These Terms are governed by the laws of <strong>INDIA</strong>, without regard to conflict-of-laws rules.</p>
 
-  <h3>10. Governing Law</h3>
-  <p>These Terms are governed by the laws of INDIA, without regard to conflict-of-laws rules.</p>
-
-  <h3>11. Contact</h3>
-  <p>Questions? Email us at <a href="mailto:srail.app@gmail.com">srail.app@gmail.com</a>.</p>
-</article>
-
+      <h3>
+        <span class="material-icons">mail</span>
+        11. Contact
+      </h3>
+      <p>Questions? Email us at <a href="mailto:srail.app@gmail.com">srail.app@gmail.com</a>.</p>
+    </article>
   </main>
-  <footer class="small">
-    © 2025 Praveen S. All rights reserved.
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms & Conditions</a>
+        <a href="mailto:srail.app@gmail.com">Contact</a>
+      </div>
+      <p style="font-size: 0.875rem;">
+        © 2025 Praveen S. All rights reserved.
+      </p>
+      <p style="font-size: 0.8rem; opacity: 0.7;">
+        Made with <span class="material-icons" style="font-size: 0.8rem; color: #ef4444; vertical-align: middle;">favorite</span> for transparent AI
+      </p>
+    </div>
   </footer>
 </body>
 </html>
